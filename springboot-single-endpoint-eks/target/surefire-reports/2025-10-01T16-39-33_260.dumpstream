@@ -1,0 +1,5 @@
+# Created at 2025-10-01T16:39:33.684
+Boot Manifest-JAR contains absolute paths in classpath 'D:\SkillUp\SkillUp-Program\k8s\microservices\springboot-single-endpoint-eks\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

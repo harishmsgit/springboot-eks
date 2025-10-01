@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-app-eks-v1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springboot-app-eks
+      release: "1.0"
+  template:
+    metadata:
+      labels:
+        app: springboot-app-eks
+        release: "1.0"
+    spec:
+      containers:
+        - name: springboot-app-eks
+          image: harsen/springboot-single-endpoint-eks:1.0
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-app-eks-v1-5
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springboot-app-eks
+      release: "1.5"
+  template:
+    metadata:
+      labels:
+        app: springboot-app-eks
+        release: "1.5"
+    spec:
+      containers:
+        - name: springboot-app-eks
+          image: harsen/springboot-single-endpoint-eks:1.5
+          ports:
+            - containerPort: 8080
